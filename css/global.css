@@ -1,0 +1,52 @@
+@import 'logo.css';
+@import 'img.css';
+@import 'background.css';
+@import 'navbar.css';
+@import 'page.css';
+@import 'card.css';
+@import 'btn.css';
+@import 'styles.css';
+
+html,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --secondary-hover-color: #D2D5DB;
+    --secondary-active-color: #4D5461;
+
+    --navbar-height: 8rem;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: var(--primary-color);
+    border-radius: 8px;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) var(--primary-color);
+    overflow-y: auto;
+}

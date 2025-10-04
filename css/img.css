@@ -1,0 +1,143 @@
+.resurs-p-prod-img {
+    /* width: 800px; */
+    /* height: 658px; */
+    aspect-ratio: 4 / 3;
+    height: calc(100vh - var(--navbar-height) - 50px);
+    /* background-color: black; */
+    background-image: url('../public/Sat_060m.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentinel-2-prod-img {
+    width: 40rem;
+    height: 40rem;
+    background-color: red;
+}
+
+/* OBJECT DETECTION IMAGE */
+.urban-detection-prod-img-1 {
+    aspect-ratio: 4 / 3;
+    height: calc(100vh - var(--navbar-height) - 50px);
+    /* background-color: black; */
+    background-image: url('../public/img/products/object_dection/roof_detection_result_1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.urban-detection-prod-img-2 {
+    aspect-ratio: 4 / 3;
+    height: calc(100vh - var(--navbar-height) - 50px);
+    /* background-color: black; */
+    background-image: url('../public/img/products/object_dection/roof_detection_result_2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* RESOLUTION IMAGE */
+.drone-res-prod-img-1 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Drone_remove_bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.drone-res-prod-img-2 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Drone_06.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.google-res-prod-img-1 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Google-sat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.google-res-prod-img-2 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Gg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.kanopus-res-prod-img-1 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Kanopus.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.kanopus-res-prod-img-2 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Kanopus_06.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentinel2-res-prod-img-1 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Sen-2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sentinel2-res-prod-img-2 {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/resoluton/Sentinel_10m.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* SATELLITE IMAGES */
+.sat-kanopus-v-res-prod-img {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/satellite/satellite-kanopus-v-type.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.sat-resurs-p-res-prod-img {
+    aspect-ratio: 4 / 3;
+    height: 280px;
+    /* background-color: black; */
+    background-image: url('../public/img/products/satellite/satellite-resurs-p-type.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

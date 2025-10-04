@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XugarSpace - Products</title>
+
+    <link rel="icon" type="image/png" href="public/xugarspace_logo_symbol_cropped.png">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" id="navbar-logo" style="cursor: pointer;">
+            <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 40px; width: auto;">
+            <span data-i18n="navbar.logo">XUGARSPACE</span>
+        </div>
+        <div class="nav-links" id="navbar-menu">
+            <a href="index.html" data-i18n="navbar.home">Home</a>
+            <a href="products.html" data-i18n="navbar.products" class="active">Products</a>
+            <a href="pricing.html" data-i18n="navbar.pricing">Pricing</a>
+            <a href="company.html" data-i18n="navbar.company">Company</a>
+            <button class="lang-btn" id="lang-toggle" type="button">EN</button>
+        </div>
+        <button class="navbar__hamburger" id="navbar-hamburger" aria-label="Open menu" style="display:none">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero" style="background: var(--secondary-bg); padding: 100px 50px;">
+        <div style="display: flex; gap: 50px; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;">
+            <div class="resurs-p-prod-img"></div>
+            <div style="max-width: 600px;">
+                <h1 style="font-size: 42px; font-weight: 700; margin-bottom: 30px; color: var(--text-primary);" data-i18n="products.hero-title">Our Products</h1>
+                <p style="font-size: 18px; line-height: 1.8; color: var(--text-secondary);" data-i18n="products.hero-subtitle">
+                    High resolution imagery and advanced Earth observation solutions for environmental monitoring, 
+                    natural resource management, and comprehensive geospatial intelligence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satellites Section -->
+    <section class="products-satellites-section" id="satellites-kanopus-v">
+        <h2 class="section-title" data-i18n="products.satellites-title">Satellites</h2>
+        
+        <div class="satellite-detail-card">
+            <h3 class="satellite-detail-title">Kanopus-V Type</h3>
+            <p class="satellite-detail-description" data-i18n="satellite.kanopus-v">
+                Kanopus-V-IK is an Earth observation satellite with a primary mission of monitoring the environment
+                and managing natural resources. It uses satellite-based imaging systems to support land use planning,
+                monitor environmental changes, and analyze natural resources. The Kanopus-V-IK satellite utilizes
+                multiple imaging modes such as panchromatic and Multizonal with the capability to capture
+                high-resolution images. This assists in monitoring agricultural areas, tracking land use, exploring
+                water resources and assessing environmental changes.
+            </p>
+            
+            <h4 class="product-subtitle" data-i18n="products.product-label">Product</h4>
+            <ul class="product-list">
+                <li data-i18n="satellite.kanopus-v-2A-processing-level">Set of images obtained by panchromatic and multizonal imaging equipment (2A processing level)</li>
+                <li data-i18n="satellite.kanopus-v-2B-2B1-processing-level">A set of images of 2B and 2B1 processing level (orthorectified panchromatic image with an area resolution of 2.7 m and synthesized RGB+NIR image with an area resolution of 12.5 m)</li>
+                <li data-i18n="satellite.kanopus-v-4A-4B-processing-level">Integrated image 4A or 4B processing level (color image with a resolution of 2.7 m)</li>
+            </ul>
+
+            <div class="satellite-spec-container">
+                <div style="display: flex; gap: 30px; align-items: center;">
+                    <table class="satellite-spec-table">
+                        <tr>
+                            <th data-i18n="products.spec-feature">Feature</th>
+                            <th>Kanopus-V-IK</th>
+                        </tr>
+                        <tr><td data-i18n="products.spec-designer">Designer</td><td>NPO VNIIEM</td></tr>
+                        <tr><td data-i18n="products.spec-country">Country of Origin</td><td>Russia</td></tr>
+                        <tr><td data-i18n="products.spec-operator">Operator</td><td>Roscosmos</td></tr>
+                        <tr><td data-i18n="products.spec-mission">Mission</td><td>Earth observation</td></tr>
+                        <tr><td data-i18n="products.spec-bus">Bus</td><td>Kanopus</td></tr>
+                        <tr><td data-i18n="products.spec-mass">Launch Mass</td><td>~600 kg (1,300 lb)</td></tr>
+                        <tr><td data-i18n="products.spec-life">Design Life</td><td>5 years</td></tr>
+                        <tr><td data-i18n="products.spec-operational">Operational</td><td>1 time</td></tr>
+                        <tr><td data-i18n="products.spec-launch">Maiden Launch</td><td>2017-07-14</td></tr>
+                        <tr><td data-i18n="products.spec-site">Launch Site</td><td>Baikonur Cosmodrome Site 31</td></tr>
+                        <tr><td data-i18n="products.spec-orbit">Orbit Regime</td><td>Low Earth Orbit (LEO)</td></tr>
+                        <tr><td data-i18n="products.spec-power">Power</td><td>300W</td></tr>
+                        <tr><td data-i18n="products.spec-instruments">Instruments</td><td>Panchromatic Imaging System, Multizonal imaging</td></tr>
+                        <tr><td data-i18n="products.spec-parameters">Orbital Parameters</td><td>Geocentric, Low Earth Orbit</td></tr>
+                    </table>
+                    <div class="sat-kanopus-v-res-prod-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resurs-P Section -->
+    <section class="products-satellites-section-alt" id="satellites-resurs-p">
+        <div class="satellite-detail-card">
+            <h3 class="satellite-detail-title">Resurs-P</h3>
+            <p class="satellite-detail-description" data-i18n="satellite.resurs-p">
+                Resurs-P is an Earth observation satellite designed to monitor the environment, manage natural resources, 
+                and track changes across different regions. Equipped with high-resolution imaging technology in both 
+                panchromatic and multispectral modes, it captures data across various wavelengths such as visible light, 
+                infrared, and near-infrared (NIR). This technology supports agricultural monitoring, environmental assessments, 
+                natural resource exploration, and tracking land use changes. It provides high-resolution imagery, including 
+                color images at a 1-meter resolution and panchromatic images at up to 0.8 meters, making it highly effective 
+                for topographic mapping, land use planning, and environmental monitoring.
+            </p>
+            
+            <h4 class="product-subtitle" data-i18n="products.product-label">Product</h4>
+            <ul class="product-list">
+                <li data-i18n="satellite.resurs-p-2A-processing-level">Geoton equipment, set of panchromatic and multispectral images (2A processing level)</li>
+                <li data-i18n="satellite.resurs-p-2B-2B1-processing-level">A set of images of 2B and 2B1 processing level (orthorectified panchromatic image with an area resolution of 0.8 m and synthesized RGB+NIR image with an area resolution of 3.0 m)</li>
+                <li data-i18n="satellite.resurs-p-4A-4B-processing-level">Integrated image processing level 4A or 4B (color image with a resolution of 1.0 m)</li>
+            </ul>
+
+            <div class="satellite-spec-container">
+                <div style="display: flex; gap: 30px; align-items: center;">
+                    <table class="satellite-spec-table">
+                        <tr>
+                            <th data-i18n="products.spec-feature">Feature</th>
+                            <th>Resurs-P</th>
+                        </tr>
+                        <tr><td data-i18n="products.spec-designer">Designer</td><td>TsSKB-Progress</td></tr>
+                        <tr><td data-i18n="products.spec-country">Country of Origin</td><td>Russia</td></tr>
+                        <tr><td data-i18n="products.spec-operator">Operator</td><td>Roscosmos</td></tr>
+                        <tr><td data-i18n="products.spec-mission">Mission</td><td>Earth observation</td></tr>
+                        <tr><td data-i18n="products.spec-bus">Bus</td><td>Yantar (satellite)</td></tr>
+                        <tr><td data-i18n="products.spec-mass">Launch Mass</td><td>6,570 kg (14,480 lb)</td></tr>
+                        <tr><td data-i18n="products.spec-life">Design Life</td><td>5 years</td></tr>
+                        <tr><td data-i18n="products.spec-operational">Operational</td><td>2 times</td></tr>
+                        <tr><td data-i18n="products.spec-launch">Maiden Launch</td><td>2013-06-25</td></tr>
+                        <tr><td data-i18n="products.spec-site">Launch Site</td><td>Baikonur Cosmodrome Site 31</td></tr>
+                        <tr><td data-i18n="products.spec-orbit">Orbit Regime</td><td>Low Earth Orbit (LEO)</td></tr>
+                        <tr><td data-i18n="products.spec-power">Power</td><td>300W</td></tr>
+                        <tr><td data-i18n="products.spec-instruments">Instruments</td><td>Panchromatic Imaging System, Multizonal imaging</td></tr>
+                        <tr><td data-i18n="products.spec-parameters">Orbital Parameters</td><td>SSO (Sun-Synchronous Orbit)</td></tr>
+                    </table>
+                    <div class="sat-resurs-p-res-prod-img"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Types Sections -->
+    <section class="image-types-section">
+        <h2 class="section-title" data-i18n="products.image-2a-title">Satellite Images (2A Processing Level)</h2>
+        <div class="image-types-grid">
+            <div class="image-type-card">
+                <h3 data-i18n="products.panchromatic-title">Panchromatic Image</h3>
+                <p data-i18n="satellite.panchromatic-image">
+                    An image captured using light from all colors in the visible light spectrum, which combines red,
+                    green, and blue light without separating them into individual colors. This results in a
+                    black-and-white image that shows the intensity of light at each point. Panchromatic images have
+                    high resolution because they do not require data from multiple color bands, making them ideal
+                    for capturing detailed surface features on Earth.
+                </p>
+            </div>
+            <div class="image-type-card">
+                <h3 data-i18n="products.multizonal-title">Multizonal Image</h3>
+                <p data-i18n="satellite.multizonal-image">
+                    An image captured using data from multiple zones or bands that differ, such as the visible light
+                    spectrum and infrared. Using this type of image allows for the analysis of surface
+                    characteristics across various wavelengths, such as plant health, land use, or environmental
+                    assessments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-types-section-alt">
+        <h2 class="section-title" data-i18n="products.image-2b-title">Satellite Images (2B and 2B1 Processing Level)</h2>
+        <div class="image-types-grid">
+            <div class="image-type-card">
+                <h3 data-i18n="products.orthorectified-title">Orthorectified Panchromatic Image</h3>
+                <p data-i18n="satellite.orthorectified-panchromatic-image">
+                    A panchromatic image that has been corrected (orthorectification) to reduce distortion caused by 
+                    capturing images over the Earth's surface. The corrected image has high geographic accuracy, making 
+                    it suitable for map creation, land surveying, urban planning and geographic analysis.
+                </p>
+            </div>
+            <div class="image-type-card">
+                <h3 data-i18n="products.synthesized-title">Synthesized RGB+NIR Image</h3>
+                <p data-i18n="satellite.synthesized-rgb-nir-image">
+                    An image created by combining data from RGB (red, green, blue) images with near-infrared (NIR) data, 
+                    producing a composite image that enhances the visibility of various surface features. This is 
+                    particularly useful for assessing plant health.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-types-section">
+        <h2 class="section-title" data-i18n="products.image-4ab-title">Satellite Images (4A or 4B Processing Level)</h2>
+        <div class="image-types-grid" style="grid-template-columns: 1fr;">
+            <div class="image-type-card">
+                <h3 data-i18n="products.color-title">Color Image</h3>
+                <p data-i18n="satellite.color-image">
+                    A color image is captured using multiple spectral channels (commonly red, green, and blue) to 
+                    represent colors in a manner closely matching human visual perception. This type of imagery 
+                    facilitates intuitive and natural interpretation, making it suitable for satellite image 
+                    presentation, terrain visualization, and comprehensive environmental assessments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <h2 class="section-title" data-i18n="products.comparison-title">Resolution Comparison</h2>
+        <div class="comparison-grid">
+            <div class="comparison-card">
+                <h3 data-i18n="products.drone-title">Drone</h3>
+                <div class="drone-res-prod-img-1"></div>
+                <div class="drone-res-prod-img-2"></div>
+                <p class="comparison-resolution">0.6 m</p>
+                <p class="comparison-price">13,000 THB / sq.km</p>
+                <p class="comparison-price-large">1,300,000 THB / 100 sq.km</p>
+            </div>
+            <div class="comparison-card">
+                <h3 data-i18n="products.google-title">Google Sat</h3>
+                <div class="google-res-prod-img-1"></div>
+                <div class="google-res-prod-img-2"></div>
+                <p class="comparison-resolution">&nbsp;</p>
+                <p class="comparison-price" data-i18n="products.free-not-updated">Free / Not up to date</p>
+                <p class="comparison-price-large">&nbsp;</p>
+            </div>
+            <div class="comparison-card featured">
+                <h3>Kanopus</h3>
+                <div class="kanopus-res-prod-img-1"></div>
+                <div class="kanopus-res-prod-img-2"></div>
+                <p class="comparison-resolution">2 m</p>
+                <p class="comparison-price">~32 THB / sq.km</p>
+                <p class="comparison-price-large">3,200 THB / 100 sq.km</p>
+            </div>
+            <div class="comparison-card">
+                <h3>Sentinel-2</h3>
+                <div class="sentinel2-res-prod-img-1"></div>
+                <div class="sentinel2-res-prod-img-2"></div>
+                <p class="comparison-resolution">10 m</p>
+                <p class="comparison-price" data-i18n="products.free">Free</p>
+                <p class="comparison-price-large">&nbsp;</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 300px; width: auto;">
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

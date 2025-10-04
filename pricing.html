@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XugarSpace - Pricing</title>
+
+    <link rel="icon" type="image/png" href="public/xugarspace_logo_symbol_cropped.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" id="navbar-logo" style="cursor: pointer;">
+            <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 40px; width: auto;">
+            <span data-i18n="navbar.logo">XUGARSPACE</span>
+        </div>
+        <div class="nav-links" id="navbar-menu">
+            <a href="index.html" data-i18n="navbar.home">Home</a>
+            <a href="products.html" data-i18n="navbar.products">Products</a>
+            <a href="pricing.html" data-i18n="navbar.pricing" class="active">Pricing</a>
+            <a href="company.html" data-i18n="navbar.company">Company</a>
+            <button class="lang-btn" id="lang-toggle" type="button">EN</button>
+        </div>
+        <button class="navbar__hamburger" id="navbar-hamburger" aria-label="Open menu" style="display:none">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Pricing Hero -->
+    <section class="pricing-hero">
+        <h1 class="hero-title" style="font-size: 56px; text-align: center;" data-i18n="pricing.hero-title">Pricing Plans</h1>
+        <p class="hero-subtitle" style="text-align: center; max-width: 700px; margin: 0 auto;" data-i18n="pricing.hero-subtitle">
+            Competitive pricing for high-resolution satellite imagery. Choose the plan that fits your needs.
+        </p>
+    </section>
+
+    <!-- Kanopus-V Pricing -->
+    <section class="pricing-section">
+        <h2 class="section-title" data-i18n="pricing.kanopus-title">Kanopus-V Type</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.kanopus-card1-title">Panchromatic and Multizonal Imaging Equipment</h3>
+                <p class="pricing-subtitle" data-i18n="pricing.processing-2a">(2A processing level)</p>
+                <div class="pricing-price">15.14 <span data-i18n="pricing.archive-survey">Archive Survey</span> <span class="currency">฿</span></div>
+                <div class="pricing-price">31.53 <span data-i18n="pricing.new-survey">New Survey</span> <span class="currency">฿</span></div>
+            </div>
+
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.kanopus-card2-title">Integrated Image 4A or 4B Processing Level</h3>
+                <p class="pricing-subtitle" data-i18n="pricing.color-27m">(Color image with a resolution of 2.7 m)</p>
+                <div class="pricing-price">44.56 <span data-i18n="pricing.archive-survey">Archive Survey</span> <span class="currency">฿</span></div>
+                <div class="pricing-price">61.38 <span data-i18n="pricing.new-survey">New Survey</span> <span class="currency">฿</span></div>
+            </div>
+
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.kanopus-card3-title">A Set of Images of 2B and 2B1 Processing Level</h3>
+                <p class="pricing-subtitle" data-i18n="pricing.ortho-27m">(Orthorectified panchromatic image with an area resolution of 2.7 m and synthesized RGB+NIR image with an area resolution of 12.5 m)</p>
+                <div class="pricing-price">38.27 <span data-i18n="pricing.archive-survey">Archive Survey</span> <span class="currency">฿</span></div>
+                <div class="pricing-price">44.58 <span data-i18n="pricing.new-survey">New Survey</span> <span class="currency">฿</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart Image 1 -->
+    <section class="chart-section">
+        <img src="data/1.jpg" alt="Pricing Chart 1" class="chart-image">
+    </section>
+
+    <!-- Resurs-P Pricing -->
+    <section class="pricing-section">
+        <h2 class="section-title" data-i18n="pricing.resurs-title">Resurs-P Type</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.resurs-card1-title">GEOTON Equipment, Set of Panchromatic and Multispectral Images</h3>
+                <p class="pricing-subtitle" data-i18n="pricing.processing-2a">(2A processing level)</p>
+                <div class="pricing-price">116.65 <span data-i18n="pricing.archive-survey">Archive Survey</span> <span class="currency">฿</span></div>
+                <div class="pricing-price">285.18 <span data-i18n="pricing.new-survey">New Survey</span> <span class="currency">฿</span></div>
+            </div>
+
+            <div class="pricing-card">
+                <h3 data-i18n="pricing.resurs-card2-title">Integrated Image Processing Level 4A or 4B</h3>
+                <p class="pricing-subtitle" data-i18n="pricing.color-10m">(Color image with a resolution of 1.0 m)</p>
+                <div class="pricing-price">280.55 <span data-i18n="pricing.archive-survey">Archive Survey</span> <span class="currency">฿</span></div>
+                <div class="pricing-price">450.07 <span data-i18n="pricing.new-survey">New Survey</span> <span class="currency">฿</span></div>
+            </div>
+
+            <div class="pricing-card featured">
+                <h3 data-i18n="pricing.resurs-card3-title">A Set of Images of 2B and 2B1 Processing Level</h3>
+                <p class="pricing-subtitle" data-i18n="pricing.ortho-08m">(Orthorectified panchromatic image with an area resolution of 0.8 m and synthesized RGB+NIR image with an area resolution of 3.0 m)</p>
+                <div class="pricing-price">194.75 <span data-i18n="pricing.archive-survey">Archive Survey</span> <span class="currency">฿</span></div>
+                <div class="pricing-price">364.15 <span data-i18n="pricing.new-survey">New Survey</span> <span class="currency">฿</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chart Image 2 -->
+    <section class="chart-section">
+        <img src="data/2.jpg" alt="Pricing Chart 2" class="chart-image">
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 300px; width: auto;">
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

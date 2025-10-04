@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XugarSpace</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/xugarspace_logo_symbol_cropped.png">
+
+    <link rel="stylesheet" href="./css/global.css">
+    <script src="./js/main.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .img-comp-container {
+            position: relative;
+            height: 200px;
+            /*should be the same height as the images*/
+        }
+
+        .img-comp-img {
+            position: absolute;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .img-comp-img img {
+            display: block;
+            vertical-align: middle;
+        }
+
+        .img-comp-slider {
+            position: absolute;
+            z-index: 9;
+            cursor: ew-resize;
+            /*set the appearance of the slider:*/
+            width: 40px;
+            height: 40px;
+            background-color: #2196F3;
+            opacity: 0.7;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <!-- <div class="navbar__container">
+        <div id="navbar-logo" class="navbar__logo-container">
+            <div class="logo__symbol__image"></div>
+            <span class="logo__text">XugarSpace</span>
+        </div>
+
+        <div class="navbar__navigator-container">
+            <a href="products.html" class="navbar__navigator--active">Products</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="company.html">Company</a>
+        </div>
+    </div> -->
+
+    <div class="navbar__container">
+        <div id="navbar-logo" class="navbar__logo-container">
+            <div class="logo__symbol__image"></div>
+            <span class="logo__text" data-i18n="navbar.logo">XugarSpace</span>
+        </div>
+
+        <button class="navbar__hamburger" id="navbar-hamburger" aria-label="Open menu" style="display:none">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="navbar__navigator-container" id="navbar-menu" tabindex="-1">
+
+            <a href="products.html" class="navbar__navigator--active" data-i18n="navbar.products">Products</a>
+            <a href="solutions.html" data-i18n="navbar.solutions">Solutions</a>
+            <a href="pricing.html" data-i18n="navbar.pricing">Pricing</a>
+            <a href="company.html" data-i18n="navbar.company">Company</a>
+            <button id="lang-toggle" type="button">EN</button>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="page__container">
+        <div style="display: flex; gap: 1rem; justify-content: center; margin: 2rem 0;">
+            <a href="#satellites" class="btn-1">Satellites</a>
+            <a href="#images2A" class="btn-1">Images 2A</a>
+            <a href="#images2B" class="btn-1">Images 2B/2B1</a>
+            <a href="#images4A4B" class="btn-1">Images 4A/4B</a>
+        </div>
+        <!-- Satellites -->
+        <section class="section" id="satellites"
+            style="background-color: var(--secondary-color); scroll-margin-top: var(--navbar-height);">
+            <!-- <h1
+                style="font-size: 2.8rem; font-weight: 700; color: var(--primary-color); position: absolute; top: 3rem; left: 3rem; margin: 0;">
+                Satellites</h1> -->
+            <div style="display: flex; gap: 15rem;">
+                <div style="display: flex; flex-direction: row;">
+
+                    <!-- <div class="resurs-p-prod-img">
+
+                    </div>
+
+                    <div class="sentinel-2-prod-img">
+
+                    </div> -->
+
+                    <div class="img-comp-container">
+                        <div class="img-comp-img">
+                            <div class="resurs-p-prod-img">
+
+                            </div>
+                        </div>
+                        <div class="img-comp-img img-comp-overlay">
+                            <div class="sentinel-2-prod-img">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--secondary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">Kanopus-V type</h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div>
+
+                <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--secondary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">Resurs-P type</h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div> -->
+            </div>
+
+        </section>
+
+        <!-- Satellite Images -->
+
+        <section class="section" id="images2A"
+            style="background-color: var(--secondary-color); scroll-margin-top: var(--navbar-height);">
+            <h1
+                style="font-size: 2.8rem; font-weight: 700; color: var(--primary-color); position: absolute; top: 3rem; left: 3rem; margin: 0;">
+                Satellite images(2A processing level)</h1>
+            <div style="display: flex; gap: 15rem;">
+                <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--primary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">Panchromatic Image
+                    </h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div>
+
+                <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--secondary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">Multizonal Image
+                    </h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section" id="images2B"
+            style="background-color: var(--primary-color); scroll-margin-top: var(--navbar-height);">
+            <h1
+                style="font-size: 2.8rem; font-weight: 700; color: var(--secondary-color); position: absolute; top: 3rem; left: 3rem; margin: 0;">
+                Satellite images(2B and 2B1 processing level)</h1>
+            <div style="display: flex; gap: 15rem;">
+                <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--secondary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">
+                        Orthorectified Panchromatic Image</h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div>
+
+                <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--secondary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">Synthesized RGB+NIR
+                        Image</h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="section" id="images4A4B"
+            style="background-color: var(--secondary-color); scroll-margin-top: var(--navbar-height);">
+            <h1
+                style="font-size: 2.8rem; font-weight: 700; color: var(--primary-color); position: absolute; top: 3rem; left: 3rem; margin: 0;">
+                Satellite images(Integrated image 4A or 4B processing level)</h1>
+            <div style="display: flex; gap: 15rem;">
+                <div class="card"
+                    style="background-color: var(--primary-color);border: 1px solid var(--primary-color); color: var(--secondary-color)">
+                    <h1 style="font-size: 2.8rem; font-weight: 700; margin: 0; margin-bottom: 2rem;">Color Image</h1>
+                    <p style="font-size: 1.8rem; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ratione
+                        beatae vitae et laudantium
+                        voluptatibus dolorem voluptates quod impedit eaque! Vitae, provident perferendis. Suscipit id
+                        aspernatur incidunt, optio inventore iste voluptate?</p>
+                    <button class="btn-1" style="margin-top: auto; margin-bottom: 1rem;">Learn More</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="footer">
+            <!-- <h1 style="font-size: 3.2rem;">Footer</h1> -->
+            <div class="logo__image"></div>
+        </section>
+
+    </div>
+
+    <!--  -->
+
+    <script>
+        function initComparisons() {
+            var x, i;
+            /*find all elements with an "overlay" class:*/
+            x = document.getElementsByClassName("img-comp-overlay");
+            for (i = 0; i < x.length; i++) {
+                /*once for each "overlay" element:
+                pass the "overlay" element as a parameter when executing the compareImages function:*/
+                compareImages(x[i]);
+            }
+            function compareImages(img) {
+                var slider, img, clicked = 0, w, h;
+                /*get the width and height of the img element*/
+                w = img.offsetWidth;
+                h = img.offsetHeight;
+                /*set the width of the img element to 50%:*/
+                img.style.width = (w / 2) + "px";
+                /*create slider:*/
+                slider = document.createElement("DIV");
+                slider.setAttribute("class", "img-comp-slider");
+                /*insert slider*/
+                img.parentElement.insertBefore(slider, img);
+                /*position the slider in the middle:*/
+                slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+                slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+                /*execute a function when the mouse button is pressed:*/
+                slider.addEventListener("mousedown", slideReady);
+                /*and another function when the mouse button is released:*/
+                window.addEventListener("mouseup", slideFinish);
+                /*or touched (for touch screens:*/
+                slider.addEventListener("touchstart", slideReady);
+                /*and released (for touch screens:*/
+                window.addEventListener("touchend", slideFinish);
+                function slideReady(e) {
+                    /*prevent any other actions that may occur when moving over the image:*/
+                    e.preventDefault();
+                    /*the slider is now clicked and ready to move:*/
+                    clicked = 1;
+                    /*execute a function when the slider is moved:*/
+                    window.addEventListener("mousemove", slideMove);
+                    window.addEventListener("touchmove", slideMove);
+                }
+                function slideFinish() {
+                    /*the slider is no longer clicked:*/
+                    clicked = 0;
+                }
+                function slideMove(e) {
+                    var pos;
+                    /*if the slider is no longer clicked, exit this function:*/
+                    if (clicked == 0) return false;
+                    /*get the cursor's x position:*/
+                    pos = getCursorPos(e)
+                    /*prevent the slider from being positioned outside the image:*/
+                    if (pos < 0) pos = 0;
+                    if (pos > w) pos = w;
+                    /*execute a function that will resize the overlay image according to the cursor:*/
+                    slide(pos);
+                }
+                function getCursorPos(e) {
+                    var a, x = 0;
+                    e = (e.changedTouches) ? e.changedTouches[0] : e;
+                    /*get the x positions of the image:*/
+                    a = img.getBoundingClientRect();
+                    /*calculate the cursor's x coordinate, relative to the image:*/
+                    x = e.pageX - a.left;
+                    /*consider any page scrolling:*/
+                    x = x - window.pageXOffset;
+                    return x;
+                }
+                function slide(x) {
+                    /*resize the image:*/
+                    img.style.width = x + "px";
+                    /*position the slider:*/
+                    slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+                }
+            }
+        }
+
+        initComparisons();
+    </script>
+
+
+    <!--  -->
+
+
+</body>
+
+</html>

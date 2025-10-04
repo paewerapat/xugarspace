@@ -1,0 +1,27 @@
+.logo__symbol__image {
+    width: 100px;
+    height: 100px;
+    background-image: url('../public/Original Logo Symbol Transparent.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* display: inline-block; */
+    
+    transform: scale(1.8);
+}
+
+.logo__text {
+    font-size: 3rem;
+    font-weight: 700;
+    /* margin-left: -2rem; */
+}
+
+.logo__image {
+    width: 590px;
+    height: 400px;
+    background-image: url('../public/Transparent Logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}

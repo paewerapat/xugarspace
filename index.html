@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XugarSpace - Home</title>
+    
+    <link rel="icon" type="image/png" href="public/xugarspace_logo_symbol_cropped.png">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo" id="navbar-logo" style="cursor: pointer;">
+            <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 40px; width: auto;">
+            <span data-i18n="navbar.logo">XUGARSPACE</span>
+        </div>
+        <div class="nav-links" id="navbar-menu">
+            <a href="index.html" data-i18n="navbar.home">Home</a>
+            <a href="products.html" data-i18n="navbar.products">Products</a>
+            <a href="pricing.html" data-i18n="navbar.pricing">Pricing</a>
+            <a href="company.html" data-i18n="navbar.company">Company</a>
+            <button class="lang-btn" id="lang-toggle" type="button">EN</button>
+        </div>
+        <button class="navbar__hamburger" id="navbar-hamburger" aria-label="Open menu" style="display:none">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Advancing Space Technology for Earth</h1>
+            <p class="hero-subtitle">
+                Cutting-edge satellite solutions for environmental monitoring, natural resource management, 
+                and high-resolution Earth observation. Transforming data into actionable insights.
+            </p>
+            <button class="cta-button" onclick="window.location.href='products.html'">Explore Our Mission</button>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Satellites Section -->
+    <section class="satellites-section">
+        <h2 class="section-title">Our Satellites</h2>
+        <div class="satellites-grid">
+            <div class="satellite-card">
+                <h3 class="card-title">Kanopus-V Type</h3>
+                <p class="card-description" data-i18n="satellite.kanopus-v">
+                    The Kanopus-V-IK satellite is designed for comprehensive Earth observation with primary missions 
+                    in environmental monitoring and natural resource management. Utilizing advanced multispectral 
+                    imaging systems including panchromatic and multizonal capabilities, it delivers high-resolution 
+                    imagery for agricultural surveys, land use tracking, water resource exploration, and natural 
+                    change detection. Our precision imaging technology enables detailed terrain mapping and efficient 
+                    environmental integrity assessment.
+                </p>
+                <a href="products.html#satellites-kanopus-v" class="learn-more-btn">Learn More →</a>
+            </div>
+
+            <div class="satellite-card">
+                <h3 class="card-title">Resurs-P Type</h3>
+                <p class="card-description" data-i18n="satellite.resurs-p">
+                    Resurs-P represents the pinnacle of Earth observation technology, focusing on environmental 
+                    monitoring, natural resource management, and comprehensive area tracking. Equipped with 
+                    high-resolution imaging across multiple spectral bands including visible light, infrared, 
+                    and near-infrared (NIR), it provides exceptional detail with 1-meter color resolution and 
+                    0.8-meter panchromatic resolution. This advanced capability supports precision agriculture 
+                    assessment, topographic mapping, land use planning, and environmental monitoring with 
+                    unprecedented accuracy.
+                </p>
+                <a href="products.html#satellites-resurs-p" class="learn-more-btn">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 300px; width: auto;">
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
