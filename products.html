@@ -31,11 +31,11 @@
 
     <!-- Products Hero Section -->
     <section class="products-hero" style="background: var(--secondary-bg); padding: 100px 50px;">
-        <div style="display: flex; gap: 50px; align-items: center; justify-content: center; max-width: 1400px; margin: 0 auto;">
+        <div class="products-hero-content">
             <div class="resurs-p-prod-img"></div>
-            <div style="max-width: 600px;">
-                <h1 style="font-size: 42px; font-weight: 700; margin-bottom: 30px; color: var(--text-primary);" data-i18n="products.hero-title">Our Products</h1>
-                <p style="font-size: 18px; line-height: 1.8; color: var(--text-secondary);" data-i18n="products.hero-subtitle">
+            <div class="products-hero-text">
+                <h1 data-i18n="products.hero-title">Our Products</h1>
+                <p data-i18n="products.hero-subtitle">
                     High resolution imagery and advanced Earth observation solutions for environmental monitoring, 
                     natural resource management, and comprehensive geospatial intelligence.
                 </p>
@@ -205,6 +205,36 @@
         </div>
     </section>
 
+    <!-- Urban Detection Sections -->
+    <section class="urban-detection-section">
+        <div class="urban-detection-content">
+            <div class="urban-detection-text">
+                <h2 data-i18n="products.urban-detection-title">Urban Detection</h2>
+                <p data-i18n="products.urban-detection-desc1">
+                    Advanced urban detection technology utilizing high-resolution satellite imagery to identify 
+                    and analyze building structures, roof patterns, and urban development. Our AI-powered system 
+                    provides accurate detection and classification of urban features for comprehensive city planning 
+                    and infrastructure management.
+                </p>
+            </div>
+            <div class="urban-detection-prod-img-1"></div>
+        </div>
+    </section>
+
+    <section class="urban-detection-section-alt">
+        <div class="urban-detection-content">
+            <div class="urban-detection-prod-img-2"></div>
+            <div class="urban-detection-text">
+                <h2 data-i18n="products.urban-detection-title2">Precision Mapping</h2>
+                <p data-i18n="products.urban-detection-desc2">
+                    Leverage our cutting-edge urban detection capabilities to monitor urban sprawl, assess infrastructure 
+                    development, and support smart city initiatives. Our solutions deliver actionable insights for 
+                    sustainable urban planning and resource allocation with unprecedented accuracy and detail.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Comparison Section -->
     <section class="comparison-section">
         <h2 class="section-title" data-i18n="products.comparison-title">Resolution Comparison</h2>
@@ -246,7 +276,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 300px; width: auto;">
+        <img src="public/Transparent Logo.png" alt="XugarSpace Logo" style="height: 150px; width: auto; opacity: 0.7;">
     </footer>
 
     <script src="./js/main.js"></script>

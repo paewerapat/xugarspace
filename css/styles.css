@@ -14,11 +14,17 @@
     --hover-color: #0066aa;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background: var(--primary-bg);
     color: var(--text-primary);
-    overflow-x: hidden;
+    position: relative;
 }
 
 /* Navbar */
@@ -48,6 +54,12 @@ body {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: 1px;
+    z-index: 1001;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
 }
 
 .logo-symbol {
@@ -73,7 +85,8 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--hover-color);
 }
 
@@ -94,10 +107,48 @@ body {
     color: var(--primary-bg);
 }
 
+/* Hamburger Menu */
+.navbar__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    position: relative;
+}
+
+.navbar__hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar__hamburger:hover span {
+    background: var(--hover-color);
+}
+
+.navbar__hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.navbar__hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +178,8 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
-    max-width: 900px;
+    max-width: 90%;
+    width: 100%;
     padding: 0 50px;
     text-align: left;
 }
@@ -138,6 +190,7 @@ body {
     line-height: 1.1;
     margin-bottom: 30px;
     letter-spacing: -2px;
+    word-wrap: break-word;
 }
 
 .hero-subtitle {
@@ -200,9 +253,11 @@ body {
 /* Satellites Section */
 .satellites-section {
     min-height: 100vh;
+    width: 100%;
     padding: 150px 50px;
     background: var(--secondary-bg);
     position: relative;
+    overflow: hidden;
 }
 
 .section-title {
@@ -210,13 +265,15 @@ body {
     font-weight: 700;
     margin-bottom: 80px;
     letter-spacing: -1px;
+    word-wrap: break-word;
 }
 
 .satellites-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
     gap: 60px;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -431,7 +488,7 @@ body {
 /* OBJECT DETECTION IMAGE */
 .urban-detection-prod-img-1 {
     aspect-ratio: 4 / 3;
-    height: 400px;
+    height: 450px;
     background-image: url('../public/img/products/object_dection/roof_detection_result_1.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -440,7 +497,7 @@ body {
 
 .urban-detection-prod-img-2 {
     aspect-ratio: 4 / 3;
-    height: 400px;
+    height: 450px;
     background-image: url('../public/img/products/object_dection/roof_detection_result_2.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -542,24 +599,66 @@ body {
 /* Products Page Styles */
 .products-hero {
     min-height: 50vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--primary-bg);
+    overflow: hidden;
+    padding: 100px 50px;
+}
+
+.products-hero-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.products-hero-text {
+    flex: 1;
+    max-width: 600px;
+    min-width: 0;
+}
+
+.products-hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-primary);
+    word-wrap: break-word;
+}
+
+.products-hero-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.products-hero .resurs-p-prod-img {
+    flex-shrink: 0;
 }
 
 .products-satellites-section {
     padding: 80px 50px;
     background: var(--tertiary-bg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .products-satellites-section-alt {
     padding: 80px 50px;
     background: var(--secondary-bg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .satellite-detail-card {
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     background: var(--secondary-bg);
     padding: 50px;
@@ -576,6 +675,7 @@ body {
     font-weight: 700;
     margin-bottom: 25px;
     color: var(--text-primary);
+    word-wrap: break-word;
 }
 
 .satellite-detail-description {
@@ -590,6 +690,7 @@ body {
     font-weight: 700;
     margin: 40px 0 20px;
     color: var(--text-primary);
+    word-wrap: break-word;
 }
 
 .product-list {
@@ -606,10 +707,13 @@ body {
 
 .satellite-spec-container {
     margin-top: 40px;
+    width: 100%;
+    overflow-x: auto;
 }
 
 .satellite-spec-table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
     background: var(--primary-bg);
     border: 2px solid var(--text-primary);
@@ -635,18 +739,23 @@ body {
 .image-types-section {
     padding: 80px 50px;
     background: var(--tertiary-bg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .image-types-section-alt {
     padding: 80px 50px;
     background: var(--primary-bg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .image-types-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
     gap: 60px;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -672,6 +781,7 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     color: var(--text-primary);
+    word-wrap: break-word;
 }
 
 .image-type-card p {
@@ -680,22 +790,88 @@ body {
     color: var(--text-secondary);
 }
 
+/* Urban Detection Sections */
+.urban-detection-section {
+    padding: 80px 50px;
+    background: var(--tertiary-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    overflow: hidden;
+}
+
+.urban-detection-section-alt {
+    padding: 80px 50px;
+    background: var(--secondary-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    overflow: hidden;
+}
+
+.urban-detection-content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.urban-detection-text {
+    flex: 1;
+    max-width: 600px;
+    min-width: 0;
+}
+
+.urban-detection-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    word-wrap: break-word;
+}
+
+.urban-detection-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.urban-detection-section .urban-detection-prod-img-1,
+.urban-detection-section-alt .urban-detection-prod-img-2 {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.urban-detection-section .urban-detection-prod-img-1:hover,
+.urban-detection-section-alt .urban-detection-prod-img-2:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
 /* Comparison Section */
 .comparison-section {
     padding: 80px 50px;
     background: var(--secondary-bg);
+    width: 100%;
+    overflow: hidden;
 }
 
 .comparison-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
     gap: 40px;
     max-width: 1400px;
+    width: 100%;
     margin: 60px auto 0;
 }
 
 .comparison-card {
-    background: #1a1a1a;
+    background: #ffffff;
     padding: 30px 20px;
     text-align: center;
     border: 2px solid transparent;
@@ -703,6 +879,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-width: 0;
 }
 
 .comparison-card.featured {
@@ -722,6 +899,7 @@ body {
     margin: 0 0 15px 0;
     padding: 10px 20px;
     background: var(--accent-color);
+    word-wrap: break-word;
 }
 
 .comparison-card.featured h3 {
@@ -744,19 +922,19 @@ body {
 
 .comparison-resolution {
     font-size: 16px;
-    color: #EEE;
+    color: #666;
     margin: 10px 0 5px 0;
 }
 
 .comparison-price {
     font-size: 14px;
-    color: #CCC;
+    color: #333;
     margin: 5px 0;
 }
 
 .comparison-price-large {
     font-size: 14px;
-    color: #CCC;
+    color: #333;
     margin: 5px 0;
 }
 
@@ -886,11 +1064,58 @@ body {
 /* Responsive */
 @media (max-width: 968px) {
     .navbar {
-        padding: 20px 30px;
+        padding: 15px 30px;
+    }
+
+    .navbar.scrolled {
+        padding: 12px 30px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 35px;
+    }
+
+    .navbar__hamburger {
+        display: flex;
     }
 
     .nav-links {
-        gap: 25px;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.98);
+        padding: 40px 30px;
+        border-radius: 12px 0 0 12px;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+        transition: right 0.4s ease;
+        min-width: 250px;
+        align-items: flex-start;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:last-of-type {
+        border-bottom: none;
+    }
+
+    .lang-btn {
+        width: 100%;
+        margin-top: 10px;
     }
 
     .hero-title {
@@ -936,39 +1161,285 @@ body {
     }
 
     .comparison-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .urban-detection-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .urban-detection-text h2 {
+        font-size: 32px;
+    }
+
+    .urban-detection-prod-img-1,
+    .urban-detection-prod-img-2 {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    /* Products Page Responsive */
+    .products-hero {
+        padding: 80px 30px;
+    }
+
+    .products-hero-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .products-hero-text {
+        max-width: 100%;
+    }
+
+    .products-hero-text h1 {
+        font-size: 36px;
+    }
+
+    .products-hero-text p {
+        font-size: 16px;
+    }
+
+    .products-hero .resurs-p-prod-img {
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    .products-satellites-section,
+    .products-satellites-section-alt {
+        padding: 60px 30px;
+    }
+
+    .satellite-detail-card {
+        padding: 30px 20px;
+    }
+
+    .satellite-detail-title {
+        font-size: 28px;
+    }
+
+    .satellite-detail-description {
+        font-size: 16px;
+    }
+
+    .product-subtitle {
+        font-size: 24px;
+    }
+
+    .product-list li {
+        font-size: 16px;
+    }
+
+    .satellite-spec-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .satellite-spec-table {
+        font-size: 14px;
+    }
+
+    .satellite-spec-table th,
+    .satellite-spec-table td {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .image-types-section,
+    .image-types-section-alt {
+        padding: 60px 30px;
+    }
+
+    .image-types-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .image-type-card {
+        padding: 30px 20px;
+    }
+
+    .image-type-card h3 {
+        font-size: 24px;
+    }
+
+    .image-type-card p {
+        font-size: 15px;
     }
 }
 
 @media (max-width: 640px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .navbar__hamburger {
+        padding: 5px;
+    }
+
+    .navbar__hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    .nav-links {
+        top: 60px;
+        min-width: 200px;
+        padding: 30px 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
     .hero-title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .hero-subtitle {
         font-size: 16px;
     }
 
-    .nav-links a {
-        font-size: 12px;
+    .hero-content {
+        padding: 0 20px;
     }
 
     .satellites-section,
     .company-info-section,
     .team-section {
-        padding: 100px 30px;
+        padding: 100px 20px;
     }
 
     .company-hero {
-        padding: 120px 30px 80px;
+        padding: 120px 20px 80px;
     }
 
     .pricing-hero {
-        padding: 120px 30px 60px;
+        padding: 120px 20px 60px;
     }
 
     .pricing-section,
     .chart-section {
-        padding: 60px 30px;
+        padding: 60px 20px;
+    }
+
+    .urban-detection-section,
+    .urban-detection-section-alt {
+        padding: 60px 20px;
+    }
+
+    .urban-detection-text h2 {
+        font-size: 26px;
+    }
+
+    .urban-detection-text p {
+        font-size: 16px;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-card {
+        padding: 25px 15px;
+    }
+
+    .comparison-card h3 {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .comparison-card.featured h3 {
+        font-size: 20px;
+    }
+
+    /* Products Page Mobile */
+    .products-hero {
+        padding: 80px 20px;
+    }
+
+    .products-hero-text h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .products-hero-text p {
+        font-size: 15px;
+    }
+
+    .products-hero .resurs-p-prod-img {
+        height: 250px;
+    }
+
+    .products-satellites-section,
+    .products-satellites-section-alt {
+        padding: 60px 20px;
+    }
+
+    .satellite-detail-card {
+        padding: 25px 15px;
+    }
+
+    .satellite-detail-title {
+        font-size: 24px;
+    }
+
+    .satellite-detail-description {
+        font-size: 15px;
+    }
+
+    .product-subtitle {
+        font-size: 20px;
+    }
+
+    .product-list {
+        padding-left: 20px;
+    }
+
+    .product-list li {
+        font-size: 15px;
+    }
+
+    .satellite-spec-table {
+        min-width: 500px;
+    }
+
+    .satellite-spec-table th,
+    .satellite-spec-table td {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .image-types-section,
+    .image-types-section-alt {
+        padding: 60px 20px;
+    }
+
+    .image-type-card {
+        padding: 25px 15px;
+    }
+
+    .image-type-card h3 {
+        font-size: 22px;
+    }
+
+    .image-type-card p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 28px;
     }
 }

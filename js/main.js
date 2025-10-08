@@ -95,39 +95,42 @@ const initToggleLanguage = () => {
 const initToggleNavbarMenu = () => {
     var hamburger = document.getElementById('navbar-hamburger');
     var menu = document.getElementById('navbar-menu');
+    
+    if (!hamburger || !menu) return;
+
     function checkWidth() {
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 968) {
             hamburger.style.display = 'flex';
-            menu.classList.remove('active');
         } else {
             hamburger.style.display = 'none';
             menu.classList.remove('active');
-            menu.style.display = '';
+            hamburger.classList.remove('active');
         }
     }
+    
     hamburger.addEventListener('click', function (e) {
         e.stopPropagation();
-        // Position menu at lower left of hamburger
-        var rect = hamburger.getBoundingClientRect();
-        menu.style.top = (rect.bottom + window.scrollY) + 'px';
-        menu.style.right = (window.innerWidth - rect.left - rect.width) + 'px';
         menu.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
-    // Close menu if click outside
+    
     document.addEventListener('click', function (e) {
         if (menu.classList.contains('active')) {
-            if (!menu.contains(e.target) && e.target !== hamburger) {
+            if (!menu.contains(e.target) && e.target !== hamburger && !hamburger.contains(e.target)) {
                 menu.classList.remove('active');
+                hamburger.classList.remove('active');
             }
         }
     });
-    // Prevent menu click from closing
+    
     menu.addEventListener('click', function (e) {
         e.stopPropagation();
     });
+    
     window.addEventListener('resize', checkWidth);
     checkWidth();
 };
+
 
 
 const initProductComparisonCharts = () => {
